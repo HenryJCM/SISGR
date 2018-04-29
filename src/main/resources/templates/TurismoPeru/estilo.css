@@ -2,9 +2,13 @@ body
 {
     margin: 0;
     padding: 0;
-    background: url(fondo.jpg);
     background-size: cover;
     font-family: sans-serif;
+}
+ .estiloForm, #encuadraImagen, #datos {
+    background-color: #f3f3f3; 
+    border: solid 2px black; 
+    margin-left:10px; width:300px; 
 }
 .login
 {

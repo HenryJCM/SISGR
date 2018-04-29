@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="TurismoPeru/estilo.css" rel="stylesheet" type="text/css" media="all">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="top">
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <div class="fl_left">
+        <ul class="faico clear">
+          <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+      <div class="fl_right">
+        <ul class="nospace inline pushright">
+          <li><i class="fa fa-sign-in"></i> <a href="TurismoPeru/login.html">Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/ConsultarMenu.jpg');">    
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear"> 
+                <div id="logo" class="fl_left">
+                    <h1><a href="index.html">Buen Sabor</a></h1>
+                </div>
+                <nav id="mainav" class="fl_right">
+                    <ul class="clear">
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a class="active" href="Reserva.html">Realizar Reserva</a></li>
+                    <li><a class="active" href="ConsultarMenu.html">Consultar Menu</a></li>
+                    <li><a class="active" href="RevisarCarta.html">Revisar Carta</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+ 
+        <div class="login">
+            <form action="#">
+                <h2>Eventos Sociales</h2>
+                <div class=""> 
+                    <label for="evento" class="form-label">Tipo de Evento</label>
+                        <select id="evento" name="evento">              
+                            <option value="">Elija opción</option>
+                            <option value="Bodas">Bodas</option>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Quinceañeros">Quinceañeros</option>
+                        </select>                                    
+                </div>
+                <div class=""> 
+                    <label for="fecha" class="form-label" >Fecha</label> 
+                    <input type="date" id="fecha" class="form-input">
+                </div>
+                <div class=""> 
+                    <label for="hora" class="form-label" >Hora del Evento</label> 
+                    <input type="time" id="hora" class="form-input">
+                </div>   
+                    <div class=""> 
+                    <label for="cantidad" class="form-label" >N° de Personas</label>                             <input type="number" id="numero" class="form-input">
+                </div><br> 
+                <h2>Datos del Clientes</h2> 
+                <div class=""> 
+                    <label for="nombre" class="form-label" >Nombre</label> 
+                    <input type="text" id="nombre" class="form-input">
+                </div>  
+                <div class="">                        
+                    <label for="correo" class="form-label" >Correo</label> 
+                    <input type="email" id="correo" class="form-input">              
+                </div> 
+                <div class="">                        
+                    <label for="telefono" class="form-label" >Telefono</label> 
+                    <input type="text" id="telefono" class="form-input">              
+                </div>  
+                    <input type="submit" name="" value="Enviar Solicitud">
+                                   
+            </form> 
+        </div>             
+    </div> 
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear"> 
+        <p class="fl_left">Copyright &copy; 2016 El Buen Sabor Perú All rights reserved. Avenida Petit Thouars 1175 - <a href="#">Santa Beatriz, Lima </a></p>
+        <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      </div>
+    </div>
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+  
+		
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+</body>
+</html>
