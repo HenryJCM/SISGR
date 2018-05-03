@@ -1,5 +1,5 @@
 package pe.edu.sistemas.sisgr.domain;
-// Generated 29/04/2018 04:35:34 AM by Hibernate Tools 4.3.1.Final
+// Generated 02/05/2018 07:58:08 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -69,7 +69,7 @@ public class Usuario implements java.io.Serializable {
 		this.usuarioUsuario = usuarioUsuario;
 	}
 
-	@Column(name = "USUARIO_CONTRASENA", length = 45)
+	@Column(name = "USUARIO_CONTRASENA")
 	public String getUsuarioContrasena() {
 		return this.usuarioContrasena;
 	}

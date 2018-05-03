@@ -1,5 +1,5 @@
 package pe.edu.sistemas.sisgr.domain;
-// Generated 29/04/2018 04:35:34 AM by Hibernate Tools 4.3.1.Final
+// Generated 02/05/2018 07:58:08 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,15 +27,15 @@ public class Persona implements java.io.Serializable {
 	private String personaEmail;
 	private String personaTipo;
 	private Set<Cliente> clientes = new HashSet<Cliente>(0);
-	private Set<Trabajador> trabajadors = new HashSet<Trabajador>(0);
 	private Set<Usuario> usuarios = new HashSet<Usuario>(0);
+	private Set<Trabajador> trabajadors = new HashSet<Trabajador>(0);
 
 	public Persona() {
 	}
 
 	public Persona(String personaNombre, String personaApellido, String personaTelefono, String personaDireccion,
-			String personaEmail, String personaTipo, Set<Cliente> clientes, Set<Trabajador> trabajadors,
-			Set<Usuario> usuarios) {
+			String personaEmail, String personaTipo, Set<Cliente> clientes, Set<Usuario> usuarios,
+			Set<Trabajador> trabajadors) {
 		this.personaNombre = personaNombre;
 		this.personaApellido = personaApellido;
 		this.personaTelefono = personaTelefono;
@@ -43,8 +43,8 @@ public class Persona implements java.io.Serializable {
 		this.personaEmail = personaEmail;
 		this.personaTipo = personaTipo;
 		this.clientes = clientes;
-		this.trabajadors = trabajadors;
 		this.usuarios = usuarios;
+		this.trabajadors = trabajadors;
 	}
 
 	@Id
@@ -123,21 +123,21 @@ public class Persona implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "persona")
-	public Set<Trabajador> getTrabajadors() {
-		return this.trabajadors;
-	}
-
-	public void setTrabajadors(Set<Trabajador> trabajadors) {
-		this.trabajadors = trabajadors;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "persona")
 	public Set<Usuario> getUsuarios() {
 		return this.usuarios;
 	}
 
 	public void setUsuarios(Set<Usuario> usuarios) {
 		this.usuarios = usuarios;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "persona")
+	public Set<Trabajador> getTrabajadors() {
+		return this.trabajadors;
+	}
+
+	public void setTrabajadors(Set<Trabajador> trabajadors) {
+		this.trabajadors = trabajadors;
 	}
 
 }

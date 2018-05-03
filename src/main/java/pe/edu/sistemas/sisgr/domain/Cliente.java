@@ -1,5 +1,5 @@
 package pe.edu.sistemas.sisgr.domain;
-// Generated 29/04/2018 04:35:34 AM by Hibernate Tools 4.3.1.Final
+// Generated 02/05/2018 07:58:08 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,8 +26,8 @@ public class Cliente implements java.io.Serializable {
 	private String clienteTipoCliente;
 	private String clienteRuc;
 	private Integer clienteDni;
-	private Set<Reserva> reservas = new HashSet<Reserva>(0);
 	private Set<Pedido> pedidos = new HashSet<Pedido>(0);
+	private Set<Reserva> reservas = new HashSet<Reserva>(0);
 
 	public Cliente() {
 	}
@@ -37,13 +37,13 @@ public class Cliente implements java.io.Serializable {
 	}
 
 	public Cliente(Persona persona, String clienteTipoCliente, String clienteRuc, Integer clienteDni,
-			Set<Reserva> reservas, Set<Pedido> pedidos) {
+			Set<Pedido> pedidos, Set<Reserva> reservas) {
 		this.persona = persona;
 		this.clienteTipoCliente = clienteTipoCliente;
 		this.clienteRuc = clienteRuc;
 		this.clienteDni = clienteDni;
-		this.reservas = reservas;
 		this.pedidos = pedidos;
+		this.reservas = reservas;
 	}
 
 	@Id
@@ -96,21 +96,21 @@ public class Cliente implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
-	public Set<Reserva> getReservas() {
-		return this.reservas;
-	}
-
-	public void setReservas(Set<Reserva> reservas) {
-		this.reservas = reservas;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	public Set<Pedido> getPedidos() {
 		return this.pedidos;
 	}
 
 	public void setPedidos(Set<Pedido> pedidos) {
 		this.pedidos = pedidos;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
+	public Set<Reserva> getReservas() {
+		return this.reservas;
+	}
+
+	public void setReservas(Set<Reserva> reservas) {
+		this.reservas = reservas;
 	}
 
 }

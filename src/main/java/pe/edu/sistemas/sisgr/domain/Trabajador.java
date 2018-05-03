@@ -1,5 +1,5 @@
 package pe.edu.sistemas.sisgr.domain;
-// Generated 29/04/2018 04:35:34 AM by Hibernate Tools 4.3.1.Final
+// Generated 02/05/2018 07:58:08 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,21 +24,18 @@ public class Trabajador implements java.io.Serializable {
 	private Integer idtrabajador;
 	private Persona persona;
 	private float trabajadorSueldo;
-	private String trabajadorcol;
 	private Set<Pedido> pedidos = new HashSet<Pedido>(0);
 
 	public Trabajador() {
 	}
 
-	public Trabajador(float trabajadorSueldo, String trabajadorcol) {
+	public Trabajador(float trabajadorSueldo) {
 		this.trabajadorSueldo = trabajadorSueldo;
-		this.trabajadorcol = trabajadorcol;
 	}
 
-	public Trabajador(Persona persona, float trabajadorSueldo, String trabajadorcol, Set<Pedido> pedidos) {
+	public Trabajador(Persona persona, float trabajadorSueldo, Set<Pedido> pedidos) {
 		this.persona = persona;
 		this.trabajadorSueldo = trabajadorSueldo;
-		this.trabajadorcol = trabajadorcol;
 		this.pedidos = pedidos;
 	}
 
@@ -71,15 +68,6 @@ public class Trabajador implements java.io.Serializable {
 
 	public void setTrabajadorSueldo(float trabajadorSueldo) {
 		this.trabajadorSueldo = trabajadorSueldo;
-	}
-
-	@Column(name = "trabajadorcol", nullable = false, length = 45)
-	public String getTrabajadorcol() {
-		return this.trabajadorcol;
-	}
-
-	public void setTrabajadorcol(String trabajadorcol) {
-		this.trabajadorcol = trabajadorcol;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "trabajador")

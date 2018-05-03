@@ -1,5 +1,5 @@
 package pe.edu.sistemas.sisgr.domain;
-// Generated 29/04/2018 04:35:34 AM by Hibernate Tools 4.3.1.Final
+// Generated 02/05/2018 07:58:08 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,19 +23,19 @@ public class Activo implements java.io.Serializable {
 	private String activoTipo;
 	private Float activoPrecio;
 	private String activoNombre;
-	private Set<Menu> menus = new HashSet<Menu>(0);
 	private Set<DetallePedido> detallePedidos = new HashSet<DetallePedido>(0);
+	private Set<Menu> menus = new HashSet<Menu>(0);
 
 	public Activo() {
 	}
 
-	public Activo(String activoTipo, Float activoPrecio, String activoNombre, Set<Menu> menus,
-			Set<DetallePedido> detallePedidos) {
+	public Activo(String activoTipo, Float activoPrecio, String activoNombre, Set<DetallePedido> detallePedidos,
+			Set<Menu> menus) {
 		this.activoTipo = activoTipo;
 		this.activoPrecio = activoPrecio;
 		this.activoNombre = activoNombre;
-		this.menus = menus;
 		this.detallePedidos = detallePedidos;
+		this.menus = menus;
 	}
 
 	@Id
@@ -78,21 +78,21 @@ public class Activo implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "activo")
-	public Set<Menu> getMenus() {
-		return this.menus;
-	}
-
-	public void setMenus(Set<Menu> menus) {
-		this.menus = menus;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "activo")
 	public Set<DetallePedido> getDetallePedidos() {
 		return this.detallePedidos;
 	}
 
 	public void setDetallePedidos(Set<DetallePedido> detallePedidos) {
 		this.detallePedidos = detallePedidos;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "activo")
+	public Set<Menu> getMenus() {
+		return this.menus;
+	}
+
+	public void setMenus(Set<Menu> menus) {
+		this.menus = menus;
 	}
 
 }

@@ -45,25 +45,27 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.
 			authorizeRequests()
 				.antMatchers("/").permitAll()
+				.antMatchers("/index").permitAll()
 				.antMatchers("/login").permitAll()
+				.antMatchers("/modulos/recepcionista").hasAuthority("RECEPCIONISTA")
+				.antMatchers("/modulos/mesero").hasAuthority("MESERO")
+				.antMatchers("/modulos/cocinero").hasAuthority("COCINERO")
+				.antMatchers("/modulos/cajero").hasAuthority("CAJERO")
 				.antMatchers("/modulos/**").hasAuthority("ADMIN").anyRequest()
 				.authenticated().and().csrf().disable().formLogin()
-				.loginPage("/home2").failureUrl("/login?error=true")
-				.defaultSuccessUrl("home")
-				.usernameParameter("codigo")
+				.loginPage("/login").failureUrl("/login?error=true")
+				.defaultSuccessUrl("/home")
+				.usernameParameter("usuario")
 				.passwordParameter("password")
 				.and().logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout=true").permitAll();
 				
-				// .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-				// .logoutSuccessUrl("/login").and().exceptionHandling()
-				// .accessDeniedPage("/access-denied");
 	}
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 	    web
 	       .ignoring()
-	       .antMatchers("/resources/**","/webjars/**","/templates/**","/static/**","/css/**","/js/**","/images/**");
+	       .antMatchers("/resources/**","/webjars/**","/static/**","/css/**","/js/**","/imgs/**");
 	}
 
 }
