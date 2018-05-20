@@ -1,0 +1,57 @@
+.content-one{
+    width: 100%;
+}
+
+.content-portada{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/fondo1.jpg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.content-module{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+@media screen and (max-width:600px){
+    .content-module{
+        width: 100%;
+    }
+}
+.content-module img{
+    margin-top: 40px;
+    transition: all 300ms;
+}
+
+.content-module img:hover{
+    transform: rotate(-10deg);
+    transition: all 300ms;
+}
+.content-item2{
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    
+}
+.icon-heart{
+    color: #e47171;
+    font-size: 40px;
+}
+.content-details{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+@media screen and (max-width:1500px){
+    .content-portada{
+        background-size: 2000px;
+    }
+}
+

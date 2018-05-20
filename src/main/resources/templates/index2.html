@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fazt Web | Mobile Web Design</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/estilos-index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="iconos/css/fontello.css">
+</head>
+<body>
+
+  <!-- MAIN WRAPPER -->
+  <div id="wrapper">
+
+    <!-- BANNER WRAPPER -->
+    <div id="banner-wrapper">
+      <header>
+        <div id="header-inner">
+          <a href="#" id="logo"><img src="images/logo.jpg" alt=""></a>
+          <nav>
+            <a href="#" id="menu-icon">
+              <i class="fa fa-bars"></i>
+            </a>
+              <ul>
+                <li><a href="index.html" class="current">Inicio</a></li>
+                <li><a href="RealizarReserva.html">Realizar Reserva</a></li>
+                <li><a href="PedidoDistancia.html">Pedido a Distancia</a></li>
+                <li><a href="RevisarCarta.html">Revisar Carta</a></li>
+                <li><a href="login.html" style="background:#df6666;color:white;">Iniciar Sesion</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- SLIDER -->
+      <div id="slide-wrap">
+        <section class="slider">
+          <ul class="slider1">
+            <li><img src="images/entradas.jpg"></li>
+            <li><img src="images/platos.jpg"></li>
+            <li><img src="images/fondo2.jpg"></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix-padding"></div>
+    <div>
+        <div class="content-details">
+            <div class="content-item2">
+                <label class="icon-laptop"></label>
+                
+                <h3>Mision</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ut nulla dicta, ab doloremque consequatur harum mollitia, ipsam minus magnam quaerat praesentium ratione, amet aperiam incidunt. Iste porro molestiae non.</p>    
+            </div>
+            <div class="content-item2">
+                <label class="icon-laptop"></label>
+                
+                <h3>Vision</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ut nulla dicta, ab doloremque consequatur harum mollitia, ipsam minus magnam quaerat praesentium ratione, amet aperiam incidunt. Iste porro molestiae non.</p>                   
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="content-module">
+            
+            <img src="images/fondo2.png">
+        </div>
+    </div>
+  <footer>
+    <label class="icon-twitter"></label>
+    <label class="icon-facebook"></label>
+    <label class="icon-instagram"></label>
+  </footer>
+  <!-- SCRIPTS -->
+  <script>
+    $(document).ready(function(){
+      $('.slider1').bxSlider({
+        mode: 'fade',
+      });
+      $('.slider2').bxSlider({
+        mode: 'fade',
+      });
+      $('.slider3').bxSlider({
+        mode: 'fade',
+      });
+    });
+  </script>
+</body>
+</html>

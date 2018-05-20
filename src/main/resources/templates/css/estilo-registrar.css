@@ -1,0 +1,17 @@
+.content-one{
+    width: 100%;
+}
+
+.content-portada{
+    width: 100%;
+    height: 800px;
+    background-image: url(../images/fondo1.jpg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:1500px){
+    .content-portada{
+        background-size: 2000px;
+    }
+}
