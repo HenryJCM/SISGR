@@ -50,10 +50,30 @@ public class LoginController {
 					modelAndView.setViewName("modelos/cajero/cajero");break;
 				case "COCINERO":
 					modelAndView.setViewName("modulos/cocinero/cocinero");break;
-				default: 
-					modelAndView.setViewName("home2");
+				default: 					modelAndView.setViewName("home2");
 			}
 			
 			return modelAndView;
 		}
+	
+	@RequestMapping(value= "/reservaMesa", method = RequestMethod.GET)
+	public ModelAndView reservaMesa(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("reservaMes");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value= "/pedidoDistancia", method = RequestMethod.GET)
+	public ModelAndView pedidoDistancia(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("pedidoDistancia");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value= "/revisarCarta", method = RequestMethod.GET)
+	public ModelAndView revisarCarta(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("revisarCarta");
+		return modelAndView;
+	}
 }
