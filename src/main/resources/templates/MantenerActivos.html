@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
+  <meta charset="utf-8">
+  <title>Restaurant EL Buen Sabor</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="iconos/css/fontello.css">
+  <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 15px;
+      }
+      </style>
 </head>
 <body>
-
-<h2>HTML Table</h2>
-
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  
-</table>
-
+  <!-- MAIN WRAPPER -->
+  <div id="wrapper">
+    <!-- BANNER WRAPPER -->
+    <div id="banner-wrapper">
+      <header>
+        <div id="header-inner">
+          <a href="#" id="logo"><img src="images/logo.jpg" alt=""></a>
+          <nav>
+            <a href="#" id="menu-icon">
+              <i class="fa fa-bars"></i>
+            </a>
+              <ul>
+                <li><a href="index2.html" class="current">Inicio</a></li>
+                <li><a href="RealizarReserva.html">Realizar Reserva</a></li>
+                <li><a href="PedidoDistancia.html">Pedido a Distancia</a></li>
+                <li><a href="RevisarCarta.html">Revisar Carta</a></li>
+                <li><a href="login2.html" style="background:#df6666;color:white;">Iniciar Sesion</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+    
+    <img src="images/imgContra.jpg" ></a>
+    <br><br>
+      <center>
+          <h2>Mantener Activos</h2>
+          <br><br>
+            <form method="POST" action=""> 
+                <tr>
+                    <td>Tipo de Evento</td>
+                        <td><input list="Evento">
+                            <datalist id="Evento">
+                                <option value="Entrada">Entrada</option>
+                                <option value="Sopas">Sopas</option>
+                                <option value="Segundo">Segundo</option>
+                                <option value="Bebidas">Bebidas</option>
+                            </datalist>
+                    </td>
+                </tr>
+                <br><br>
+              <table>
+              <tr>
+                <th>Activos</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+              </tr>
+              <tr>
+                <td>Causa Rellena de Pollo</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td>Palta Rellena de Pollo</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td>Sopa Criolla</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td>Sopa a la Minuta</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td>Palta a la Jardinera</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td>Tacu-Tacu</td>
+                <td><a href="editarActivos.html">Editar</a></td>
+                <td><a href="eliminarActivos.html">Eliminar</a></td>
+              </tr>             
+                            
+            </form>
+            
+          </table>
+          <br>
+          <input type="submit" name="" value="Agregar">    
+        </center> 
+  </div>
+  <footer>
+    <label class="icon-twitter"></label>
+    <label class="icon-facebook"></label>
+    <label class="icon-instagram"></label>
+  </footer>
 </body>
 </html>

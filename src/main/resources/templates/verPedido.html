@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="iconos/css/fontello.css">
   <style>
+   
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 15px;
+      }
+    
     form {
       width: 80%;
       margin: 0 auto;
@@ -47,12 +56,50 @@
       <br><br> 
       <h2 style="text-align-last: center">Recuperar  Contraseña</h2> 
       <br><br>  
-      <form method="POST" action="verificarId.html" id="formulario">             
+      <form method="POST" action="listaPedidos.html" id="formulario">             
         <tr>
-          <td>Correo</td><br>
-          <td><input type="email" name=""></td><br>
+          <td>Mesa</td>
+          <td><input type="text" name=""></td><br>
        </tr> 
-        <td><input type="submit" name="" value="Siguiente"></td>         
+       <tr>
+          <td>Hora</td>
+          <td><input type="text" name=""></td><br>
+       </tr> 
+       <tr>
+          <td>Detalle</td><br><br>
+       </tr> 
+       <table style="text-align-last: center">
+          <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              
+            </tr>
+            <tr>
+              <td>Sopa de Minuta</td>
+              <td>2</td>
+            </tr>
+            <tr>
+                  <td>Sopa de Minuta</td>
+                  <td>2</td>
+            </tr>
+            <tr>
+                <td>Sopa de Minuta</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                  <td>Sopa de Minuta</td>
+                    <td>2</td>
+              </tr>
+              <tr>
+                  <td>Sopa de Minuta</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                      <td>Sopa de Minuta</td>
+                      <td>2</td>
+                </tr>
+       </table>
+        <td><input type="submit" name="" value="Volver"></td>         
       </form>    
   </div>
   <footer>

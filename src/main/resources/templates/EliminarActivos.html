@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="iconos/css/fontello.css">
   <style>
-    form {
+     th, td {
+          padding: 10px;
+      }
+      form {
       width: 80%;
       margin: 0 auto;
       text-align: center; 
@@ -40,26 +43,42 @@
                 <li><a href="login.html" style="background:#df6666;color:white;">Iniciar Sesion</a></li>
             </ul>
           </nav>
-        </div>       
+        </div>  
       </header>
     </div>
-      <img src="images/imgContra.jpg" ></a>
-      <br><br> 
-      <h2 style="text-align-last: center">Recuperar  Contraseña</h2> 
-      <br><br>  
-      <form method="POST" action="verificarId.html" id="formulario">             
-        <tr>
-          <td>Correo</td><br>
-          <td><input type="email" name=""></td><br>
-       </tr> 
-        <td><input type="submit" name="" value="Siguiente"></td>         
-      </form>    
+    <img src="images/imgContra.jpg"></a>
+    <br><br>
+        <h2 style="text-align-last: center">Eliminar activos</h2>
+        <br><br>
+            <form id="formulario" method="POST" action="ConfirmarElimanarActivo.html"> 
+                <tr>
+                    <td>Nombre del activo</td>
+                    <td><input type="text" name=""></td><br>
+                </tr>
+                <tr>
+                    <td>Precio del activo</td>
+                    <td><input type="text" name=""></td><br>
+                </tr>
+                <tr>
+                    <td>Tipo de Activo</td>
+                        <td><input list="Evento">
+                            <datalist id="Evento">
+                                <option value="Entrada">Entrada</option>
+                                <option value="Sopas">Sopas</option>
+                                <option value="Segundo">Segundo</option>
+                                <option value="Bebidas">Bebidas</option>
+                            </datalist>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="" value="Registrar"></td>
+                </tr>           
+            </form>   
   </div>
   <footer>
     <label class="icon-twitter"></label>
     <label class="icon-facebook"></label>
     <label class="icon-instagram"></label>
   </footer>
-  
 </body>
 </html>

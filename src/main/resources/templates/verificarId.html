@@ -6,6 +6,19 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="iconos/css/fontello.css">
+  <style>
+    form {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center; 
+      text-align-last: left;
+      padding: 2%;
+    }
+    input{
+      padding: 1.5%;
+      margin: 2%;
+    }
+  </style>
 </head>
 <body>
   <!-- MAIN WRAPPER -->
@@ -27,33 +40,26 @@
                 <li><a href="login.html" style="background:#df6666;color:white;">Iniciar Sesion</a></li>
             </ul>
           </nav>
-        </div>  
+        </div>       
       </header>
     </div>
-    <img src="images/imgContra.jpg"></a>
-    <br><br>
-    <center>
-      <table>
-        <h2>Verificar Identidad</h2>
-        <br><br>
-            <form method="POST" action="renovarContraseña.html"> 
-              <tr>
-                <td><p>Se ha enviado a tu correo un codigo de 4 digitos, Ingrese aqui</p></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="txtusuario" maxlength="8"></td>
-              </tr>
-              <tr>
-                <td><input type="submit" name="" value="Siguiente"></td>
-              </tr>           
-            </form> 
-      </table>   
-    </center>    
+      <img src="images/imgContra.jpg" ></a>
+      <br><br> 
+      <h2 style="text-align-last: center">Verificacion de Identidad</h2> 
+      <br><br>  
+      <form method="POST" action="renovarContraseña.html" id="formulario">
+        <p>Se le ha enviado un correo con codigo, escribe el codigo</p>             
+        <tr>
+          <td><input type="text" name=""></td><br>
+       </tr> 
+        <td><input type="submit" name="" value="Siguiente"></td>         
+      </form>    
   </div>
   <footer>
     <label class="icon-twitter"></label>
     <label class="icon-facebook"></label>
     <label class="icon-instagram"></label>
   </footer>
+  
 </body>
 </html>

@@ -1,53 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Web servicio magtimus</title>
-    <link rel="stylesheet" href="iconos/css/fontello.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/estilos-index.css">
-    <link href="css/estilo1.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="css/footer.css">
-    
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="utf-8">
+  <title>Fazt Web | Mobile Web Design</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="iconos/css/fontello.css">
+  <style>
+    form {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center; 
+      text-align-last: left;
+      padding: 2%;
+    }
+    input{
+      padding: 1.5%;
+      margin: 2%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo.jpg" class="img-logo">
-        <input type="checkbox" id="check">
-        <label for="check" class="icon-menu"></label>
-        
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
+  <!-- MAIN WRAPPER -->
+  <div id="wrapper">
+    <!-- BANNER WRAPPER -->
+    <div id="banner-wrapper">
+      <header>
+        <div id="header-inner">
+          <a href="#" id="logo"><img src="images/logo.jpg" alt=""></a>
+          <nav>
+            <a href="#" id="menu-icon">
+              <i class="fa fa-bars"></i>
+            </a>
+              <ul>
+                <li><a href="index.html" class="current">Inicio</a></li>
                 <li><a href="RealizarReserva.html">Realizar Reserva</a></li>
                 <li><a href="PedidoDistancia.html">Pedido a Distancia</a></li>
                 <li><a href="RevisarCarta.html">Revisar Carta</a></li>
                 <li><a href="login.html" style="background:#df6666;color:white;">Iniciar Sesion</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="content-one">
-            <div class="content-portada">
-                <br><br><br><br><br><br><br><br><br>
-                <fieldset class="login">
-                    <h2>Reeditar Contraseña</h2>
-                    <form method="POST" action="confirmarContraseña.html">
-                        <p>Contraseña Nueva </p>
-                        <input  type="password"   name="" placeholder="Ingresar contraseña nueva">
-                        <p>Confirmar Contraseña</p>
-                        <input  type="password" name="" placeholder="Confirmar contraseña">
-                        <input type="submit" name="" value="Terminar">
-                    </form> 
-                </fieldset>
-            </div>
-        </div>   
-    </main>
-    <footer>
-        <label class="icon-twitter"></label>
-        <label class="icon-facebook"></label>
-        <label class="icon-instagram"></label>
-    </footer>
+          </nav>
+        </div>       
+      </header>
+    </div>
+      <img src="images/imgContra.jpg" ></a>
+      <br><br> 
+      <h2 style="text-align-last: center">Reeditar Contraseña</h2> 
+      <br><br>  
+      <form method="POST" action="confirmarContraseña.html" id="formulario">
+        <tr>
+            <td>Ingrese Contraseña Nueva</td>
+            <td><input type="password" name=""></td><br>
+        </tr>            
+        <tr>
+            <td>Confirmar su  Contraseña</td>
+            <td><input type="password" name=""></td><br>
+       </tr> 
+        <td><input type="submit" name="" value="Siguiente"></td>         
+      </form>    
+  </div>
+  <footer>
+    <label class="icon-twitter"></label>
+    <label class="icon-facebook"></label>
+    <label class="icon-instagram"></label>
+  </footer>
 </body>
+</html>
